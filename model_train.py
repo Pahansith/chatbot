@@ -97,6 +97,7 @@ def main():
     data_set = process_data(data_set)
     x_train, y_train, input_shape, output_length, vocabulary = tokenize_data(data_set)
     model = configure_model(input_shape, vocabulary, output_length)
+    print(model.summary)
     model = train_model(model, x_train, y_train)
     save_configurations(folder_name, model, responses, input_shape, le)
 

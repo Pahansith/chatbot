@@ -34,7 +34,7 @@ with open(os.path.join(folder_name,'label_encoder.pickle'), 'rb') as handle:
     le = pickle.load(handle)
 
 
-confidence_threshold = 0.5 
+confidence_threshold = 0.7 
 while True:
     texts_p = []
     prediction_input = input('You : ')
@@ -48,7 +48,8 @@ while True:
 
     output = model.predict(prediction_input)
     confidence = np.max(output)
-
+    print(confidence)
+    response_tag = ''
     if confidence < confidence_threshold:
         print("Bot : I'm sorry, I don't understand your question.")
     else:
