@@ -1,8 +1,5 @@
 import random
-import json
 import numpy as np
-import pandas as pd
-import nltk
 import string
 
 from tf_keras.preprocessing.text import Tokenizer
@@ -57,7 +54,7 @@ while True:
     else:
         output = output.argmax()
         response_tag = le.inverse_transform([output])[0]
-        print(response_tag)
+        # print(response_tag)
         print("Bot : ", random.choice(responses[response_tag]))
     if response_tag == 'thanks':
         break
