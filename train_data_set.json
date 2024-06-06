@@ -1,0 +1,137 @@
+{
+    "intents" : 
+    [
+        {
+            "questions": ["Hello", "Hi", "Hey", "What's up", "Greetings", "Good morning"],
+            "label": "hello",
+            "answers": [
+                "Hello! How can I assist you today?",
+                "Hi there! How may I help you?",
+                "Welcome! How can I make your tour experience better?",
+                "Greetings! How may I be of service?",
+                "Good day! How can I assist with your tourism needs?"
+            ]
+        },
+        {
+            "questions": ["New tour", "Book tour", "I want to book a tour", "Book a Tour", "Book me a tour", "I'm interested in booking a tour", "Guide me how to book a tour", "I would love to book tour", "Help me to book a tour", "I would like to book a tour for me", "Booking"],
+            "label": "booktour",
+            "answers": [
+                "We offer a variety of tours. Please provide your email so we can send you more details.",
+                "We have a selection of tours available. Kindly share your email for further information.",
+                "We can offer you a range of tours. Please provide your email for additional details.",
+                "We have availability for various tours. Feel free to share your email with us for more information.",
+                "We provide a variety of tours. Please provide your email so we can send you further details."
+            ]
+        },
+        {
+            "questions": ["Types","Tour types","What types of tours do you offer?", "Tell me about your tour options", "What are the tour options I can take", "Show me the tour options you have", "Tour types", "Suggest me tour types"],
+            "label": "types",
+            "answers": [
+                "We offer a range of tour types including sightseeing, adventure, and cultural tours.",
+                "Our tours include options such as sightseeing, adventure, and cultural experiences.",
+                "We have a selection of tour types available, including sightseeing, adventure, and cultural experiences.",
+                "You can choose from different tour types, including sightseeing, adventure, and cultural experiences.",
+                "Our tours provide a variety of options, including sightseeing, adventure, and cultural experiences."
+            ]
+        },
+        {
+            "questions": ["What is the cost","Cost","How much","Price","How much does a tour cost?", "What are your tour prices?", "How much for a tour", "How the cost is apply", "I need to know the cost for tour", "Cost please"],
+            "label": "price",
+            "answers": [
+                "Our tour prices vary based on the type of tour you choose. Prices start at $50 per person.",
+                "Tour prices are dependent on the type of tour you select. Prices start at $50 per person.",
+                "Prices for our tours differ depending on the type of tour. Prices start at $50 per person.",
+                "For tour prices, it depends on the tour type you prefer. Prices start at $50 per person.",
+                "Tour prices vary according to the type of tour you choose. Prices start at $50 per person."
+            ]
+        },
+        {
+            "questions": ["Cancelling","Need to cancel","Cancel","How to cancel","Can I cancel my tour booking?", "I need to cancel my tour", "When can I cancel my tour?", "What time can I cancel my tour?", "I have to cancel my tour", "Cancel my tour", "Cancel the tour", "If I need to cancel my tour"],
+            "label": "cancel",
+            "answers": [
+                "Certainly! To cancel your tour booking, please provide your reservation details such as the booking ID or the name under which the reservation was made.",
+                "Sure! To assist you with canceling your tour booking, I'll need some information such as your booking ID or the name on the reservation.",
+                "No problem! In order to cancel your tour booking, please provide me with the necessary details such as your booking ID or the name under which the reservation was made.",
+                "Of course! To proceed with canceling your tour booking, could you please provide me with your booking ID or the name used for the reservation?",
+                "I can help you with that. To cancel your tour booking, please provide me with your booking ID or the name associated with the reservation."
+            ]
+        },
+        {
+            "questions": ["Time","Starting time","Start time","When is the starting time of the tour?", "What time does the tour start?", "What is the time tour is starting", "Tour starting time", "Time of the starting", "What time should I join"],
+            "label": "starttime",
+            "answers": [
+                "The starting time for our tours varies depending on the specific tour. Please refer to your booking confirmation for details.",
+                "Tour starting times vary based on the tour you've booked. Please check your booking confirmation for the specific time.",
+                "The start time for each tour is different. Please consult your booking confirmation for the exact time.",
+                "The starting time for your tour will be provided in your booking confirmation.",
+                "Tour starting times are specified in your booking confirmation."
+            ]
+        },
+        {
+            "questions": ["Guide","Tour Guides","Guided tours","Guided","Do you provide guided tours?", "Are your tours guided?", "Options for guided tours", "Are there tour guidance", "What guidence you provide", "I need guidence"],
+            "label": "guidedtours",
+            "answers": [
+                "Yes, we offer guided tours led by experienced and knowledgeable guides.",
+                "Absolutely! Our tours include expert guides who will enhance your experience.",
+                "Indeed! Our tours are guided by knowledgeable individuals who will provide insightful commentary.",
+                "Certainly! Our tours are led by experienced guides who will ensure you have a memorable experience.",
+                "Yes, our tours feature knowledgeable guides who will share fascinating insights with you."
+            ]
+        },
+        {
+            "questions": ["Transportation","Transport options","Transport","Do you offer transportation for the tour?", "How do I get to the tour?", "What transport options you provide", "I need to know the transportation options", "I need transportation", "Do you have transportation arrangements"],
+            "label": "transportation",
+            "answers": [
+                "Yes, we provide transportation options for our tours. Please let us know your preferences and we can assist you further.",
+                "We offer transportation services for our tours. Feel free to inquire about our options.",
+                "Transportation is available for our tours. Let us know if you require assistance with arranging it.",
+                "We can help arrange transportation for your tour if needed. Just let us know your requirements.",
+                "Yes, transportation can be arranged for our tours. Please inform us of your needs."
+            ]
+        },
+        {
+            "questions": ["Visit Places","Places visit","What are the locations","Locations","What is the location of the tourist attraction?", "Where is the tour located?", "Tourist attraction locations", "Tour starting locations", "What is the starting location", "I need to know the location"],
+            "label": "location",
+            "answers": [
+                "The location of the tour starting point will be provided in your booking confirmation.",
+                "You'll find the tour starting point location specified in your booking confirmation.",
+                "The specific location for your tour will be detailed in your booking confirmation.",
+                "The starting location for your tour will be included in your booking confirmation.",
+                "The tour starting point will be provided to you in your booking confirmation."
+            ]
+        },
+        {
+            "questions": ["How to contact","Your contact","Contact details","Contact me","Contact","Your contact details please?", "Can I have your contact information?", "How can I contact you?", "I need contacts", "Contact information please", "How to contact"],
+            "label": "contact",
+            "answers": [
+                "Thank you for your interest! You can contact us at 0478855888. We look forward to hearing from you soon.",
+                "We appreciate your inquiry! Feel free to reach us at 0478855888 for any questions or assistance.",
+                "Contact us at 0478855888. We're available to help with any inquiries you may have.",
+                "Providing our contact number: 0478855888. Don't hesitate to reach out to us for further information or support.",
+                "We're here to assist you! Call us at 0478855888 for any additional information or assistance."
+            ]
+        },
+        {
+            "questions": ["Do you have a website?", "Can I visit your website?", "I would like to see your website", "What is your website", "I need to see the website", "Website information"],
+            "label": "website",
+            "answers": [
+                "Yes, we have a website where you can find more information about our tours and services.",
+                "Certainly! You can visit our website for additional details on our tours and offerings.",
+                "We do have a website. Feel free to explore it for more information on our tours.",
+                "Yes, our website contains comprehensive information about our tours and services.",
+                "Absolutely! Our website is a great resource for learning more about our tours and amenities."
+            ]
+        },
+        {
+            "questions": ["Thank you", "Thanks", "Appreciate it", "Thank you very much", "Great", "Awesome"],
+            "label": "thanks",
+            "answers": [
+                "You're welcome! It was my pleasure to assist you.",
+                "You're welcome! If you have any more questions, feel free to ask.",
+                "You're welcome! I'm here to help, so let me know if there's anything else I can assist you with.",
+                "You're welcome! I'm glad I could be of help. If you need any further assistance, don't hesitate to ask.",
+                "You're welcome! Thank you for reaching out. If there's anything else I can do for you, please let me know."
+            ]
+        }
+    ]
+}
