@@ -63,30 +63,31 @@ model = Model(i, x)
 model.compile(loss="sparse_categorical_crossentropy", optimizer='adam', metrics=['accuracy'])
 
 model.fit(x_train, y_train, epochs=1000)
+folder_name = 'conf'
 
-import random
-confidence_threshold = 0.5 
-while True:
-    texts_p = []
-    prediction_input = input('You : ')
-    prediction_input = [letters.lower() for letters in prediction_input if letters not in string.punctuation]
-    prediction_input = ''.join(prediction_input)
-    texts_p.append(prediction_input)
+import os
+# Create the folder if it doesn't exist
+if not os.path.exists(folder_name):
+    os.makedirs(folder_name)
 
-    prediction_input = tokenizer.texts_to_sequences(texts_p)
-    prediction_input = np.array(prediction_input).reshape(-1)
-    prediction_input = pad_sequences([prediction_input], input_shape)
+model.save(os.path.join(folder_name, 'chatbot_model.h5'))  # Save the model to an HDF5 file
 
-    output = model.predict(prediction_input)
-    confidence = np.max(output)
+import pickle
 
-    if confidence < confidence_threshold:
-        print("Bot : I'm sorry, I don't understand your question.")
-    else:
-        output = output.argmax()
-        response_tag = le.inverse_transform([output])[0]
-        print(response_tag)
-        print("Bot : ", random.choice(responses[response_tag]))
-    if response_tag == 'thanks':
-        break
+# Save the tokenizer to a file
+with open(os.path.join(folder_name,'tokenizer.pickle'), 'wb') as handle:
+    pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+# Save the responses dictionary
+with open(os.path.join(folder_name,'responses.pickle'), 'wb') as handle:
+    pickle.dump(responses, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+# Save the input_shape
+with open(os.path.join(folder_name,'input_shape.pickle'), 'wb') as handle:
+    pickle.dump(input_shape, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+# Save the LabelEncoder
+with open(os.path.join(folder_name,'label_encoder.pickle'), 'wb') as handle:
+    pickle.dump(le, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
 
