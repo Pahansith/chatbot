@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  backend:
+    # Name of the service
+    build: 
+      context: ./chat-server
+      # Dockerfile location, default is Dockerfile if not specified
+      dockerfile: Dockerfile
+    ports:
+      # Map TCP port 8000 inside the container to port 4000 on the Docker host
+      - "5000:5000"
+    restart: always
+    # Ensures the container restarts if it exits or crashes
+
+  frontend:
+    build:
+      context: ./chat-ui
+      # Context directory where Dockerfile and source code are located
+      dockerfile: Dockerfile
+    ports:
+      # Map TCP port 3000 inside the container to port 3000 on the Docker host
+      - "3000:3000"
+    depends_on:
+      # Ensures frontend starts only after the backend has started
+      - backend
+    restart: always
