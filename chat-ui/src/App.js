@@ -14,7 +14,6 @@ function App() {
         messageParser={MessageParser}
         actionProvider={ActionProvider}
       />
-      
     </div>
   );
 }
