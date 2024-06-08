@@ -1,0 +1,10 @@
+.avatar {
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    color: white;
+    border-radius: 100%;
+    content: url(https://c0.klipartz.com/pngpicture/498/917/gratis-png-computadora-iconos-escritorio-red-portatil-graficos-icono-chatbot-thumbnail.png);
+}

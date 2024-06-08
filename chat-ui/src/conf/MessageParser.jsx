@@ -1,10 +1,16 @@
 import React from 'react';
 
-const ActionProvider = ({ createChatBotMessage, setState, children }) => {
+const MessageParser = ({ children, actions }) => {
+  const parse = (message) => {
+    console.log(message)
+    actions.handleBackendCall(message)
+  };
+
   return (
     <div>
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
+          parse: parse,
           actions: {},
         });
       })}
@@ -12,4 +18,4 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   );
 };
 
-export default ActionProvider;
+export default MessageParser;
