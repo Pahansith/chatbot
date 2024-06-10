@@ -43,12 +43,14 @@ def predict():
     prediction_input = [letters.lower() for letters in prediction_input if letters not in string.punctuation]
     prediction_input = ''.join(prediction_input)
     texts_p.append(prediction_input)
-
     prediction_input = tokenizer.texts_to_sequences(texts_p)
     prediction_input = np.array(prediction_input).reshape(-1)
     prediction_input = pad_sequences([prediction_input], input_shape)
 
+    # Predict the response using the model
     output = model.predict(prediction_input)
+
+    # Reading the prediction confidence for the given input
     confidence = np.max(output)
     print("Prediction Confidence : ", confidence)
     if confidence < 0.7:
