@@ -2,15 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-  // const handleHello = (message) => {
-  //   console.log("Received message " + message)
-  //   const botMessage = createChatBotMessage('Hello. Nice to meet you.');
-
-  //   setState((prev) => ({
-  //     ...prev,
-  //     messages: [...prev.messages, botMessage],
-  //   }));
-  // };
   const handleBackendCall = async (userMessage) => {
     const reply = await axios.post('http://localhost:5000/chat', {message: userMessage})
     console.log(reply)
