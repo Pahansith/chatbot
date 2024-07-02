@@ -36,19 +36,3 @@ This application is a simple chatbot developed using TensorFlow and an LSTM (Lon
      ```bash
      docker-compose up --build
      ```
-
-## Additional Information
-
-### License
-- Include details about the licensing of the project here.
-
-### Contributing
-- Guidelines for contributing to this project can be added here.
-
-### Authors and Acknowledgment
-- List the contributors and acknowledge any help or work derived from other sources.
-
-### Support
-- Provide information on where users can go for help with using the project.
-
-This revised README includes all the details and maintains a consistent format across all sections. Let me know if there are further adjustments you would like to make!
